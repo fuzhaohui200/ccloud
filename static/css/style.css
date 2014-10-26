@@ -1,0 +1,73 @@
+img {
+	border: none;
+}
+
+/* dock - top */
+.dock {
+	position: fixed; 
+	bottom: 2px;
+	height: 50px; 
+	text-align: center;
+	z-index: 999999;
+}
+.dock-container {
+	position: fixed;
+	bottom: 2px;
+	height: 50px;
+	background: url(../images/nav/dock/dock-bg2.gif);
+	padding-left: 20px;
+}
+a.dock-item {
+	display: block;
+	width: 40px;
+	color: #005580;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+}
+.dock-item img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+.dock-item span {
+	display: none; 
+	padding-left: 20px;
+}
+
+/* dockMenu - bottom */
+#dockMenu {
+	width: 100%;
+	position: fixed;
+	bottom: 2px;
+	left: 0px;
+	z-index: 999999;
+}
+.dock-container2 {
+	position: fixed;
+	bottom: 2px;
+	height: 50px;
+	background: url(../images/nav/dock/dock-bg.gif);
+	padding-left: 20px;
+}
+a.dock-item2 {
+	display: block; 
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #0070E4; 
+	bottom: 0px; 
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+.dock-item2 span {
+	display: none;
+	padding-left: 20px;
+}
+.dock-item2 img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}

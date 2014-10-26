@@ -1,0 +1,7 @@
+url:
+1. reset all data
+reset_all
+
+2. aix_init
+aix_init
+

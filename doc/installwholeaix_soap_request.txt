@@ -1,0 +1,96 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://localhost:8080/ControlAIX">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:paramsInstallWholeAIX>
+		 <HMC_IP>182.247.251.247</HMC_IP>
+         <HMCServerName>Server-9117-MMA-SN06D6D82</HMCServerName>
+         <VIOClientName>vioc7_test_leon_client</VIOClientName>
+         <min_mem>1024</min_mem>
+         <desired_mem>2048</desired_mem>
+         <max_mem>32768</max_mem>
+         <min_procs>1</min_procs>
+         <desired_procs>2</desired_procs>
+         <max_procs>16</max_procs>
+         <min_proc_units>0.1</min_proc_units>
+         <desired_proc_units>1.0</desired_proc_units>
+         <max_proc_units>16</max_proc_units>
+         <virtual_eth_adapters>22/0/1///1,23/0/2///1,24/0/11///1,25/0/12///1</virtual_eth_adapters>
+         <virtual_scsi_adapter>23</virtual_scsi_adapter>
+         <VIOServerIP_1>182.247.251.215</VIOServerIP_1>
+         <VIOServerUsername_1>padmin</VIOServerUsername_1>
+         <VIOServerPasswd_1>padmin</VIOServerPasswd_1>
+         <VIOServerIP_2>182.247.251.219</VIOServerIP_2>
+         <VIOServerUsername_2>padmin</VIOServerUsername_2>
+         <VIOServerPasswd_2>padmin</VIOServerPasswd_2>
+         <rootvg_lun>hdiskpower7</rootvg_lun>
+         <vhost_name>vhost7</vhost_name>
+         <VTD_name>vioc7_rootvg</VTD_name>
+         <NIM_IP>182.247.251.173</NIM_IP>
+         <NIM_username>root</NIM_username>
+         <NIM_passwd>root</NIM_passwd>
+         <ClientMgrIP>182.247.251.159</ClientMgrIP>
+         <ServerHostName>test_leon_client</ServerHostName>
+         <spot>AIX5307spot</spot>
+         <lpp_source>AIX5307standard</lpp_source>
+         <mksysb>AIX5307temp</mksysb>
+         <HMC_username>hscroot</HMC_username>
+         <HMC_passwd>abc1234</HMC_passwd>
+         <VIOClientMgrGateway>182.247.251.1</VIOClientMgrGateway>
+         <VIOClientServiceIP>192.168.1.159</VIOClientServiceIP>
+         <VIOClientServiceGateway>192.168.1.1</VIOClientServiceGateway>
+         <TargetServerUsername>root</TargetServerUsername>
+         <TargetServerPasswd>root</TargetServerPasswd>
+         <TargetServerPort>23</TargetServerPort>
+         <TargetServerCmdPrompt>#</TargetServerCmdPrompt>
+         <HMC_ssh_port>22</HMC_ssh_port>
+		 <HMC_cmd_prompt>hscroot@localhost:~></HMC_cmd_prompt>
+         <VIOServerPort_1>23</VIOServerPort_1>
+         <VIOCmd_prompt_1>$</VIOCmd_prompt_1>
+         <VIOServerPort_2>23</VIOServerPort_2>
+         <VIOCmd_prompt_2>$</VIOCmd_prompt_2>
+         <NIM_port>23</NIM_port>
+         <NIM_prompt>#</NIM_prompt>
+      </con:paramsInstallWholeAIX>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+
+
+
+
+Remove Whole AIX
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://localhost:8080/ControlAIX">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <con:paramsRemoveWholeAIX>
+         <HMC_IP>182.247.251.247</HMC_IP>
+         <HMC_user>hscroot</HMC_user>
+         <HMC_passwd>abc1234</HMC_passwd>
+         <HMCServerName>Server-9117-MMA-SN06D6D82</HMCServerName>
+         <VIOClientName>vioc7_test_leon_client</VIOClientName>
+         <HMC_ssh_port>22</HMC_ssh_port>
+         <HMC_cmd_prompt>></HMC_cmd_prompt>
+         <NIM_IP>182.247.251.173</NIM_IP>
+         <NIM_username>root</NIM_username>
+         <NIM_passwd>root</NIM_passwd>
+         <ServerHostName>test_leon_client</ServerHostName>
+         <NIM_port>23</NIM_port>
+         <NIM_prompt>#</NIM_prompt>
+         <VIOServerIP_1>182.247.251.215</VIOServerIP_1>
+         <VIOServerUsername_1>padmin</VIOServerUsername_1>
+         <VIOServerPasswd_1>padmin</VIOServerPasswd_1>
+         <VTD_name>vioc7_rootvg</VTD_name>
+         <VIOServerPort_1>23</VIOServerPort_1>
+         <VIOCmd_prompt_1>$</VIOCmd_prompt_1>
+         <VIOServerIP_2>182.247.251.219</VIOServerIP_2>
+         <VIOServerUsername_2>padmin</VIOServerUsername_2>
+         <VIOServerPasswd_2>padmin</VIOServerPasswd_2>
+         <VIOServerPort_2>23</VIOServerPort_2>
+         <VIOCmd_prompt_2>$</VIOCmd_prompt_2>
+      </con:paramsRemoveWholeAIX>
+	</soapenv:Body>
+</soapenv:Envelope>

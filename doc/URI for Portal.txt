@@ -1,0 +1,85 @@
+
+1. 获取当前登录的用户组名列表
+ get_user_groups/   返回示例（json）：
+ 
+  {"group_list": ["VMwareUser", "aix_user"]}
+
+
+
+2. 普通用户提交服务请求
+     对应workflow_servicerequest表
+        http://localhost:8000/api/service_request_by_user/?format=json
+		允许组： VMwareUser, aix_user
+        get method，获取当前登录的用户所属的所有service request,用于查看当前服务请求的状态
+        post method, 提交新的服务请求，格式：
+        
+        {
+            "description": "申请AIX虚拟机,cpu: 2, 内存: 4G",
+            "request_parameter": "{'name':'test_leon','type':'aix','cpu':2,'mem':4,'os_type':'5307'}",
+            "request_status": {
+                "id": "1"
+            },
+            "request_type": {
+                "id": "1"
+            }
+        }
+
+3. 普通管理员查看审批项
+    对应workflow_approve表
+	待审批：
+	http://localhost:8000/api/approve/?approve_status__approve_status_caption=under approval&format=json
+	已通过：
+	http://localhost:8000/api/approve/?approve_status__approve_status_caption=pass&format=json
+	已拒绝：
+	http://localhost:8000/api/approve/?approve_status__approve_status_caption=fail&format=json
+	待定：
+	http://localhost:8000/api/approve/?approve_status__approve_status_caption__startswith=pending&format=json
+	
+	允许组：Common Administrator,  System Administrator
+	get method 
+	put method 修改状态
+	
+	/api/approve/4/
+	
+	http://localhost:8000/api/ApproveStatus/?format=json
+	审批通过：
+	/api/ApproveStatus/1/
+	{
+       "approve_status":
+       {
+           "id": 2,
+           "resource_uri": "/api/ApproveStatus/2/"
+       }
+	}
+	
+	不通过：
+	{
+           "id": 3,
+           "resource_uri": "/api/ApproveStatus/3/"
+    }
+            
+4. 系统管理员查看警告
+    对应workflow_systemresourcealert 表
+	待解决：
+	http://localhost:8000/api/system_alert/?status__status__startswith=Not&format=json
+	已解决：
+	http://localhost:8000/api/system_alert/?status__status__startswith=Resource&format=json
+	
+	get method
+	put method 修改状态
+	
+5. aix分区资源表
+    对应 aix_vioclient表
+	只有get method
+	http://localhost:8000/api/vioclient/?belong_to_username=ces&format=json
+	其中belong_to_username=ces用以查询ces所占有的aix分区资源
+	
+	需要用户是属于aix_user组
+	此uri有漏洞，待修改为不用提交用户名，直接查出当前提交的用户所有的vioclient
+
+6. aix_version
+     对应aix_version表， 用于提交服务请求页面的aix版本下拉框
+     只有get method
+     http://localhost:8000/api/aix_version/?format=json
+        
+ 

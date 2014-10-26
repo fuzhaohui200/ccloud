@@ -1,0 +1,35 @@
+一、页面内容根据当前登录的用户所在组来决定
+   使用URI:  http://localhost:8000/get_user_groups/  获取json txt格式的组列表
+       {"group_list": ["VMwareUser", "aix_user"]}
+       
+    1. ‘申请资源’：  当用户组包括 VMwareUser或aix_user时显示
+    2. '服务请求':   当用户组包括 VMwareUser或aix_user时显示
+    3. '资源审批':   当用户组包括 Common Administrator或System Administrator时显示
+    4. '资源警告':   当用户组包括 System Administrator时显示
+    5. '资源管理':   当用户组包括 VMwareUser或aix_user时显示
+
+二、一些细节
+    1. Banner下面那行信息，‘管理员’换成当前用户名
+         URI:  http://localhost:8000/get_username/
+    
+    2. 修改密码：  弹出div, 显示一个form, 包括以下字段：
+            原密码：old_passwd
+            新密码: new_passwd
+            重复新密码: confirmed_passwd
+            把以上3个字段POST到 http://localhost:8000/change_passwd/
+            正确返回： {success: true, msg: "重置密码成功。"}
+            错误返回： {success: false, msg: "原密码不正确。"}
+                       {success: false, msg: "两次密码不一致"}
+    
+    3. 去除“修改个人信息”,  去除“帮助”
+    
+    4. 底部增加footer, 显示版权版本信息
+    5. Banner修改
+    6. 登录页面，图片修改，LOGO去除，“使用条款”，“隐私声明”，“反馈”，“关于”，四个使用点击弹出对话框的形式，显示简要文字信息。  “反馈” 使用 mailto:support@ce-service.com.cn
+    
+    7. 更改index 左侧按钮的图标
+    8. “资源审批” 中，待审批的放在第一个Tab
+    9. “资源警告” 中，待处理的放在第一个Tab
+    
+
+三、 “资源管理”， Grid上方增加“启动”、“关闭”，“重启”，“删除”四个按钮

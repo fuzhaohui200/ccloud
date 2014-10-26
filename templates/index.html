@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css"  href="{{static_root}}/jsFramework/kendoUI/styles/kendo.common.min.css" />
+    <link  rel="stylesheet" type="text/css"  href="{{static_root}}/jsFramework/kendoUI/styles/kendo.default.min.css"/>   
+    <link  rel="stylesheet" type="text/css"  href="{{static_root}}/jsFramework/kendoUI/styles/kendo.blueopal.min.css"/>   
+    <link rel="stylesheet" type="text/css" media="screen" href="{{static_root}}/css/layout.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{static_root}}/css/dock.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{static_root}}/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{static_root}}/css/bootstrap.css">
+{% endblock %}
+    
+{% block content %}    
+    <div id="pageContent"> </div>
+    <script type="text/javascript" src="{{static_root}}/js/jquery.jqDock.min.js"></script>
+    <script type="text/javascript" src="{{static_root}}/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="{{static_root}}/js/bootstrap.js"></script>
+    
+    <script type="text/javascript"  src="{{static_root}}/js/modules/common.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/index.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/resources_approves.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/resources_apply.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/resources_service_request.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/resources_manage.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/resources_warn.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/system_manage.js"> </script>
+    <script type="text/javascript"  src="{{static_root}}/js/modules/system_log.js"> </script>
+    
+{% endblock %}

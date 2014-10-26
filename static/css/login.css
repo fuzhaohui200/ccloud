@@ -1,0 +1,349 @@
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+html {
+	color: #000;
+	background: #FFF
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td
+{
+	margin: 0;
+	padding: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,img {
+	border: 0
+}
+
+address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var
+	{
+	font: inherit
+}
+
+del,ins {
+	text-decoration: none
+}
+
+li {
+	list-style: none
+}
+
+caption,th {
+	text-align: left
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+q:before,q:after {
+	content: ''
+}
+
+abbr,acronym {
+	border: 0;
+	font-variant: normal
+}
+
+sup {
+	vertical-align: baseline
+}
+
+sub {
+	vertical-align: baseline
+}
+
+legend {
+	color: #000
+}
+
+/*here leevel's hack begins*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td,img,span
+	{
+	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	border: 0 none;
+	background: 0;
+	vertical-align: baseline
+}
+
+a:link,a:visited,a:hover,a:active,a:focus {
+	text-decoration: none
+}
+
+textarea {
+	overflow-y: auto
+}
+
+h1 {
+	font-size: 138.5%
+}
+
+h2 {
+	font-size: 123.1%
+}
+
+h3 {
+	font-size: 108%
+}
+
+h1,h2,h3 {
+	margin: 1em 0
+}
+
+h1,h2,h3,h4,h5,h6,strong {
+	font-weight: bold
+}
+
+input[type=text],input[type=password],textarea {
+	width: 12.25em;
+	*width: 11.9em
+}
+
+a:link {
+	color: inherit
+}
+
+a:visited {
+	color: inherit
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+body {
+	font: 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
+	*font-size: small;
+	*font: x-small;
+}
+
+select,input,button,textarea {
+	font: 99% arial, helvetica, clean, sans-serif;
+	outline: none
+}
+
+table {
+	font-size: inherit;
+	font: 100%
+}
+
+pre,code,kbd,samp,tt {
+	font-family: monospace;
+	*font-size: 108%;
+	line-height: 100%
+}
+
+/*Bank of Communication */
+input[type=text] {
+	border: 1px solid #C0C0C0;
+}
+
+label {
+	cursor: pointer;
+	display: block;
+}
+
+.cb {
+	display: block;
+	margin: auto
+}
+
+.rel {
+	position: relative
+}
+
+.abs {
+	position: absolute
+}
+
+.absR {
+	position: absolute;
+	right: 0
+}
+
+.red {
+	color: #d00
+}
+
+.fltR {
+	float: right
+}
+
+.fltL {
+	float: left
+}
+
+.w25 {
+	width: 25% !important
+}
+
+.w30 {
+	width: 30% !important
+}
+
+.w33 {
+	width: 33% !important
+}
+
+.w40 {
+	width: 40% !important
+}
+
+.w50 {
+	width: 50% !important
+}
+
+.w60 {
+	width: 60% !important
+}
+
+.w70 {
+	width: 70% !important
+}
+
+.w75 {
+	width: 75% !important
+}
+
+.w95 {
+	width: 95% !important
+}
+
+.block {
+	display: block
+}
+
+.mL10 {
+	margin-left: 10px
+}
+
+.mT50 {
+	margin-top: 50px
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clear {
+	clear: both;
+}
+
+.container {
+	width: 1024px;
+	margin: auto
+}
+
+/*Login page*/
+.login_header {
+	height: 25px
+}
+
+.login_content {
+	height: 576px;
+	width: 1069px;
+	background: url(../images/login_bg.png) no-repeat;
+	position: relative
+}
+
+.login_logo {
+	position: absolute;
+	padding-top: 20px;
+	padding-left: 40px
+}
+
+.login_form_area {
+	width: 200px;
+	position: absolute;
+	top: 220px;
+	right: 20px
+}
+
+.login_line {
+	font-size: 18px;
+	padding: 5px 0;
+	height:  42px;
+}
+
+.login_line span {
+	line-height: 20px;
+	color: #36a;
+	text-shadow: 1px 1px 1px #777;
+}
+
+input.login_input {
+	height: 25px;
+	line-height: 20px;
+	width: 110px;
+	background: #FFF;
+	border: 1px solid #BBB;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px #CCC inset
+}
+
+input.login_input:focus {
+	border-color: #6bf;
+	box-shadow: 0 1px 3px #ccc inset, 0 0 8px #6bf;
+}
+
+.login_btn {
+	width: 119px;
+	height: 31px;
+	background: url(../images/login_btn.gif) no-repeat;
+	float: left;
+}
+
+.login_btn:hover {
+	background: url(../images/login_btn-Over.gif) no-repeat;
+	cursor: pointer
+}
+
+.login_footer_area {
+	width: 950px;
+	position: absolute;
+	left: 25px;
+	bottom: 0px
+}
+/*Footer*/
+.footer {
+	padding: 0 10px;
+	background: #d4d4d4;
+	font-size: 12px;
+	line-height: 40px;
+	border-radius: 0 15px 15px 0
+}
+
+.footer_links {
+	background: #fff;
+	border-radius: 5px;
+	line-height: 1.5;
+	margin-top: 10px
+}
+
+.footer_links a {
+	padding: 0 15px
+}
+
+.footer_links a,.footer_links a:link,.footer_links a:visited {
+	color: #666
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="Shortcut Icon" href="{{static_root}}/images/logo.ico" />
+
+<!-- Set a title for the page (id is not necessary). -->
+<title>{% block title %}EMCS系统{% endblock %}</title>
+
+<!-- You can have onReady function here or in your application file. -->
+<!-- If you have it in your application file delete the whole -->
+<!-- following script tag as we must have only one onReady. -->
+
+{% block extrastyle %}{% endblock %}
+
+<!-- Main js program -->
+    <script type="text/javascript" src="{{static_root}}/jsFramework/kendoUI/js/jquery.min.js"> </script>
+    <script type="text/javascript" src="{{static_root}}/jsFramework/kendoUI/js/kendo.all.min.js"> </script>
+    <script type="text/javascript" src="{{static_root}}/js/jquery.cookie.js"> </script>
+    <script type="text/javascript" src="{{static_root}}/js/jquery.form.js"> </script>
+    <script type="text/javascript" src="{{static_root}}/js/modules/common.js"> </script>
+
+<script type="text/javascript"> 
+// Path to the blank image must point to a valid location on your server
+</script>
+
+{% block head %}{% endblock %}
+
+</head>
+
+<body>
+{% block content %}{% endblock %}
+</body>
+
+</html>

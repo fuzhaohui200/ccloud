@@ -1,0 +1,43 @@
+升级步骤
+停ecms   
+cd /opt/cCloud/ecms
+./stop_ecms.sh
+
+备份cCloud
+cd /opt
+tar -cvf cCloud_1.0_backup.tar.gz ./cCloud/
+
+tar -xvf cCloud_ecms_1.1_upgrade_patch.tar
+cd cCloud_ecms_1.1_upgrade_patch
+\cp -rf * /opt/cCloud/ecms/
+
+cd /opt/cCloud/ecms
+cp sqlite3.db sqlite3.db_1.0
+sqlite3 sqlite3.db
+.read alter_table_name.sql
+.exit
+
+
+
+
+
+1. 备份原有数据库
+cp sqlite3.db sqlite3_1.0_backup.db
+
+2. 更新数据库
+   sqlite3 sqlite3.db
+   .read alter_table_name.sql
+   .exit
+ 
+升级程序文件
+
+
+	python manage.py syncdb
+	
+	python manage.py shell
+	from ecms.upgrade_from_10_to_11 import *
+	add_table()
+	migrate()
+	exit()
+	
+	

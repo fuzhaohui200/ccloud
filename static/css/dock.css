@@ -1,0 +1,3 @@
+#dockContainer { position: fixed; top: 60px; left: 6px; z-index: 999999; }
+#jqDock { position: relative; bottom: 48px; }
+.jqDockLabel { background-color:#60C6FF; font:"微软雅黑"; font-weight: 800; font-size:18; color: #00234C; padding: 3px 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; width: 56px;}

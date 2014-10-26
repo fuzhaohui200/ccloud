@@ -1,0 +1,20 @@
+﻿1. create EUAO Task-->create check_task,  task.check_task=check_task_created, task.status='created, check_task_created.status='created'
+
+2. when task.status=='created', run task, get task_id(EUAO Thread ID), task.status='executing'
+
+3. when task.status=='executing', begin to check if task funish using GetResponse, GetResponse will set task.status to 'finished' or 'error'
+
+4. when task.status=='finished', if task.check_task exist, set task.check_task.status to ready_to_executing
+
+5. when check_task.status=='ready_to_execute', run(check_task), get check_task_id(EUAO Thread ID), set check_task.status to executing
+
+6. when check_task.status=='executing', begin to check if check_task finished using GetResponse, GetResponse will set check_task.status to 'finished' or 'error'
+
+7. if check_tast.status=='error', task.status='error
+
+8. if check_task.status=='finished', check check_task.verdict_condition, if satisfied, check_task.status='succeed'
+
+8. if check_task.status=='succeed', task.status=='succeed'
+
+9. if task.status=='succeed', service_request.status='succeed'
+ 
